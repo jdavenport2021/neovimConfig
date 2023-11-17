@@ -27,14 +27,23 @@ end
 vim.opt.rtp:prepend(lazypath)
 -- Requires lazy
 require("lazy").setup({
-  "nvim-neo-tree/neo-tree.nvim",
+  {
+    "nvim-neo-tree/neo-tree.nvim",
+    branch = "v3.x",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+      "MunifTanjim/nui.nvim",
+    }
+  },
   "folke/which-key.nvim",
   {
     "folke/tokyonight.nvim",
     lazy = false,
     priority = 1000,
     opts = {},
-  }
+  },
+  { "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} }
 })
 
 -- Loading tokyonight
