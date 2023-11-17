@@ -83,3 +83,14 @@ require("tokyonight").setup({
   on_highlights = function(highlights, colors) end,
 })
 vim.cmd[[colorscheme tokyonight]]
+
+-- Changing neotree settings
+require('neo-tree').setup {
+  filesystem = {
+    filtered_items = {
+      visible = true,
+      hide_dotfiles = false,
+      hide_gitignored = true,
+    }
+  }
+}

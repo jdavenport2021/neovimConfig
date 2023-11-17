@@ -18,3 +18,5 @@ map('n', '<leader>n', ':tabnew\n', {})
 
 -- mapping opening Neotree
 map('n', '<leader>t', ':Neotree\n', {})
+map('n', '<leader>h', ':Neotree ~\n', {})
+
